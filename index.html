@@ -2,37 +2,59 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./assets/lock.ico" type="image/x-icon">
-    <title>Tradutor Criptográfico</title>
+    <meta charset="utf-8" />
+    <title>Simulador Enigma - QWERTY (Rotores Fixos)</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+    <h1>Máquina Enigma Simulada</h1>
 
-    <header>
-
-        <h1>Tradutor Criptográfico</h1>
-
-        <span class="material-symbols-outlined swap-btn" onclick="inverterCampos()">
-            forward_media
-        </span>
-
-    </header>
+    <div class="controls">
 
 
-    <div class="container">
-        <textarea id="input" placeholder="Mensagem Criptografada"></textarea>
+        <div class="row-controls">
+            <select id="plugboard" required>
+                <option value="">Selecione o plugboard...</option>
+                <option value="AB CD EF">AB CD EF</option>
+                <option value="PQ RS TU">PQ RS TU</option>
+                <option value="JK LM NO">JK LM NO</option>
+                <option value="XZ YW VU">XZ YW VU</option>
+            </select>
+        </div>
 
+        <div class="rotor-config" aria-label="Posições iniciais dos rotores (A=0 ... Z=25)">
+            <!-- Rotores fixos: I, II, III -->
+            <label style="opacity:0.9">Rotor I</label>
+            <input id="rotor1_pos" type="number" min="0" max="25" value="0" title="Posição rotor 1 (0-25)" />
 
-        <textarea id="output" placeholder="Mensagem" readonly></textarea>
+            <label style="opacity:0.9">Rotor II</label>
+            <input id="rotor2_pos" type="number" min="0" max="25" value="0" title="Posição rotor 2 (0-25)" />
+
+            <label style="opacity:0.9">Rotor III</label>
+            <input id="rotor3_pos" type="number" min="0" max="25" value="0" title="Posição rotor 3 (0-25)" />
+        </div>
+
+        <textarea id="output" placeholder="Resultado" readonly></textarea>
+
+        <div class="buttons">
+            <button id="translate_btn">Traduzir (prompt)</button>
+            <button id="copy_btn">Copiar</button>
+            <button id="clear_btn">Limpar</button>
+        </div>
     </div>
 
-    <div class="buttons">
-        <button id="translate_btn" onclick="traduzir()">Descriptografar</button>
-        <button onclick="copiarTexto()">Copiar</button>
+    <div class="panels">
+
+        <div class="lamps-wrap">
+            <div class="lampboard" id="lamps"></div>
+        </div>
+
+        <div class="keyboard-wrap">
+            <div class="keyboard" id="keyboard"></div>
+        </div>
+
     </div>
 
     <script src="script.js"></script>
