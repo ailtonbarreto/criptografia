@@ -11,6 +11,31 @@
 <body>
     <h1>Máquina Enigma Simulada</h1>
 
+    <div class="config">
+
+        <div class="rotor-config" aria-label="Posições iniciais dos rotores (A=0 ... Z=25)">
+
+            <label style="opacity:0.9">Rotor I</label>
+            <input id="rotor1_pos" type="number" min="0" max="25" value="0" title="Posição rotor 1 (0-25)" />
+
+            <label style="opacity:0.9">Rotor II</label>
+            <input id="rotor2_pos" type="number" min="0" max="25" value="0" title="Posição rotor 2 (0-25)" />
+
+            <label style="opacity:0.9">Rotor III</label>
+            <input id="rotor3_pos" type="number" min="0" max="25" value="0" title="Posição rotor 3 (0-25)" />
+        </div>
+
+        <div class="buttons">
+            <button id="translate_btn">Descriptografar</button>
+            <button id="copy_btn">Copiar</button>
+            <button id="clear_btn">Limpar</button>
+        </div>
+
+
+    </div>
+
+
+
     <div class="controls">
 
 
@@ -24,25 +49,11 @@
             </select>
         </div>
 
-        <div class="rotor-config" aria-label="Posições iniciais dos rotores (A=0 ... Z=25)">
-            <!-- Rotores fixos: I, II, III -->
-            <label style="opacity:0.9">Rotor I</label>
-            <input id="rotor1_pos" type="number" min="0" max="25" value="0" title="Posição rotor 1 (0-25)" />
 
-            <label style="opacity:0.9">Rotor II</label>
-            <input id="rotor2_pos" type="number" min="0" max="25" value="0" title="Posição rotor 2 (0-25)" />
-
-            <label style="opacity:0.9">Rotor III</label>
-            <input id="rotor3_pos" type="number" min="0" max="25" value="0" title="Posição rotor 3 (0-25)" />
-        </div>
 
         <textarea id="output" placeholder="Resultado" readonly></textarea>
 
-        <div class="buttons">
-            <button id="translate_btn">Descriptografar</button>
-            <button id="copy_btn">Copiar</button>
-            <button id="clear_btn">Limpar</button>
-        </div>
+
     </div>
 
     <div class="panels">

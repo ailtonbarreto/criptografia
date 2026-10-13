@@ -63,19 +63,34 @@ textarea {
 
 .row-controls {
   display: flex;
+  flex-direction: row;
+  align-items: left;
   gap: 8px;
   width: 100%;
-  max-width: 900px;
+}
+
+.config{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 96%;
+  align-items: center;
+  margin: 1vw;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: row;
+
 }
 
 .rotor-config {
   display: flex;
-  gap: 8px;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: left;
+  gap: 8px;
 }
 
 .rotor-config input {
@@ -83,17 +98,11 @@ textarea {
   text-align: center;
 }
 
-.buttons {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 8px;
-  flex-wrap: wrap;
-}
+
 
 button {
-  padding: 10px 18px;
-  font-size: 15px;
+  padding: 0.7vw ;
+  font-size: 17px;
   border-radius: 6px;
   border: none;
   cursor: pointer;
@@ -126,21 +135,18 @@ button:hover {
   flex-wrap: wrap;
 }
 
-.keyboard-wrap{
-  width: 90%;
-  
-}
-
 .keyboard-wrap,
 .lamps-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  width: 100%;
 }
 
 .keyboard {
   width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -162,8 +168,8 @@ button:hover {
   font-size: 16px;
   border-radius: 6px;
   cursor: pointer;
-  width: 44px;
-  height: 44px;
+  width: 6vw;
+  height: 2vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -180,6 +186,8 @@ button:hover {
 }
 
 .lampboard {
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -200,8 +208,8 @@ button:hover {
   border-radius: 50%;
   background: var(--lamp-off);
   color: var(--text);
-  width: 44px;
-  height: 44px;
+  width: 60px;
+  height: 60px;
   font-weight: 600;
   box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.6);
 }
@@ -210,19 +218,4 @@ button:hover {
   background: var(--lamp-on);
   color: #000;
   box-shadow: 0 0 8px rgba(255, 200, 0, 0.6);
-}
-
-/* responsividade */
-@media (max-width:768px) {
-
-  .key,
-  .lamp {
-    width: 36px;
-    height: 36px;
-    font-size: 14px;
-  }
-
-  .rotor-config input {
-    width: 80px;
-  }
 }
