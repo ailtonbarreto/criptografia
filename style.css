@@ -91,11 +91,10 @@ textarea {
   align-items: center;
   justify-content: left;
   gap: 8px;
-}
 
-.rotor-config input {
-  width: 110px;
-  text-align: center;
+  label {
+    text-align: center;
+  }
 }
 
 
@@ -227,6 +226,14 @@ button:hover {
     text-align: center;
   }
 
+  .lampboard {
+    display: none;
+  }
+
+  .config {
+    flex-direction: column-reverse;
+  }
+
   textarea,
   select,
   input[type="number"] {
@@ -234,25 +241,24 @@ button:hover {
     padding: 8px;
   }
 
-  .row-controls,
-  .config,
-  .buttons{
+  .row-controls {
     flex-direction: column;
     align-items: stretch;
     gap: 10px;
-    margin: 3vw 0;
-  }
-
-  .lamp-row,.row{
-    width: 100%;
+    margin: 4vw 0;
   }
 
   .rotor-config {
-    flex-direction: row;
+    width: 100%;
+  }
 
-    label {
-      text-align: center;
-    }
+  .buttons {
+    width: 100%;
+    margin: 15vw 0;
+  }
+
+  .row {
+    width: 100%;
   }
 
   button {
@@ -268,9 +274,4 @@ button:hover {
     padding: 0;
   }
 
-  .lamp {
-    width: 35px;
-    height: 35px;
-    font-size: 12px;
-  }
 }
