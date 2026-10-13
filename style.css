@@ -69,7 +69,7 @@ textarea {
   width: 100%;
 }
 
-.config{
+.config {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -101,7 +101,7 @@ textarea {
 
 
 button {
-  padding: 0.7vw ;
+  padding: 0.7vw;
   font-size: 17px;
   border-radius: 6px;
   border: none;
@@ -218,4 +218,55 @@ button:hover {
   background: var(--lamp-on);
   color: #000;
   box-shadow: 0 0 8px rgba(255, 200, 0, 0.6);
+}
+
+/* Ajustes gerais para telas menores */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  textarea,
+  select,
+  input[type="number"] {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .row-controls,
+  .config,
+  .buttons{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .rotor-config {
+    flex-direction: row;
+
+    label {
+      text-align: center;
+    }
+  }
+
+  button {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .key {
+    width: 40px;
+    /* tamanho fixo mais adequado para toque */
+    height: 40px;
+    font-size: 14px;
+    padding: 0;
+  }
+
+  .lamp {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+  }
 }
