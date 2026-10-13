@@ -188,7 +188,7 @@ function preencherPlugboardComPalavras() {
   });
 }
 
-// Valida se rotores e plugboard estão configurados; retorna mensagem ou null
+
 function validarConfiguracao() {
   const r1 = document.getElementById('rotor1_pos').value;
   const r2 = document.getElementById('rotor2_pos').value;
@@ -218,7 +218,7 @@ function pressionarTecla(letra) {
   acenderLampada(resultado);
 }
 
-// Acende lâmpada correspondente e apaga as outras
+
 function acenderLampada(letra) {
   qwertyLayout.join('').split('').forEach(ch => {
     const lamp = document.getElementById('lamp_' + ch);
