@@ -16,17 +16,104 @@
         <div class="rotor-config" aria-label="Posições iniciais dos rotores (A=0 ... Z=25)">
 
             <label style="opacity:0.9">Rotor I</label>
-            <input id="rotor1_pos" type="number" min="0" max="25" value="0" title="Posição rotor 1 (0-25)" />
+                <select id="rotor1_pos">
+                <option value="">Sel</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+            </select>
 
             <label style="opacity:0.9">Rotor II</label>
-            <input id="rotor2_pos" type="number" min="0" max="25" value="0" title="Posição rotor 2 (0-25)" />
+            <select id="rotor2_pos">
+                <option value="">Sel</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+            </select>
 
             <label style="opacity:0.9">Rotor III</label>
-            <input id="rotor3_pos" type="number" min="0" max="25" value="0" title="Posição rotor 3 (0-25)" />
+            <select id="rotor3_pos">
+                <option value="">Sel</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+            </select>
         </div>
 
         <div class="buttons">
-            <button id="translate_btn">Descriptografar</button>
+            <button id="translate_btn">Encript-Decript</button>
             <button id="copy_btn">Copiar</button>
             <button id="clear_btn">Limpar</button>
         </div>
@@ -41,15 +128,13 @@
 
         <div class="row-controls">
             <select id="plugboard" required>
-                <option value="">Selecione o plugboard...</option>
-                <option value="AB CD EF">AB CD EF</option>
-                <option value="PQ RS TU">PQ RS TU</option>
-                <option value="JK LM NO">JK LM NO</option>
-                <option value="XZ YW VU">XZ YW VU</option>
+                <option value="">Selecione uma configuração</option>
+                <option value="AB CD EF">AMOR</option>
+                <option value="PQ RS TU">ÓDIO</option>
+                <option value="JK LM NO">CASAMENTO</option>
+                <option value="XZ YW VU">CARRO</option>
             </select>
         </div>
-
-
 
         <textarea id="output" placeholder="Resultado" readonly></textarea>
 
