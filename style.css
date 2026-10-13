@@ -243,6 +243,10 @@ button:hover {
     margin: 3vw 0;
   }
 
+  .lamp-row,.row{
+    width: 100%;
+  }
+
   .rotor-config {
     flex-direction: row;
 
@@ -258,16 +262,15 @@ button:hover {
   }
 
   .key {
-    width: 40px;
-    /* tamanho fixo mais adequado para toque */
-    height: 40px;
+    width: 42px;
+    height: 42px;
     font-size: 14px;
     padding: 0;
   }
 
   .lamp {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     font-size: 12px;
   }
 }
